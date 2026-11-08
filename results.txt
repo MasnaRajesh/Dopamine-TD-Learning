@@ -1,0 +1,31 @@
+== Experiment 1: learning curve (alpha=0.10, 300 trials) ==
+trial   1: delta@bell=0.000  delta@food=1.000
+trial  10: delta@bell=0.000  delta@food=0.387
+trial  25: delta@bell=0.028  delta@food=0.080
+trial  50: delta@bell=0.365  delta@food=0.006
+trial 100: delta@bell=0.939  delta@food=0.000
+trial 300: delta@bell=1.000  delta@food=0.000
+baseline (no learning) delta@food on every trial = 1.000
+learned values V[cue..reward-1] = 1.000, 1.000, 1.000, 1.000, 1.000, 1.000
+
+== Experiment 3: three patterns ==
+before learning : delta@bell=0.000 delta@food=1.000
+after learning  : delta@bell=1.000 delta@food=0.000
+food omitted    : delta@bell=1.000 delta@food=-1.000
+
+== Experiment 4: learning-rate sweep (trials until |delta@food| < 0.05) ==
+alpha=0.03: 100 trials
+alpha=0.10: 30 trials
+alpha=0.30: 10 trials
+alpha=0.60: 5 trials
+
+== Experiment 5: reward probability (mean over last 1000 of 3000 trials) ==
+p=0.00: delta@bell=0.00  delta@food(if given)=n/a  delta@food(if omitted)=0.00
+p=0.25: delta@bell=0.25  delta@food(if given)=0.75  delta@food(if omitted)=-0.25
+p=0.50: delta@bell=0.53  delta@food(if given)=0.48  delta@food(if omitted)=-0.52
+p=0.75: delta@bell=0.77  delta@food(if given)=0.24  delta@food(if omitted)=-0.76
+p=1.00: delta@bell=1.00  delta@food(if given)=0.00  delta@food(if omitted)=n/a
+
+== Experiment 6: timing ==
+early (t=6): delta@early=1.000  delta@learned time(t=8)=-1.000
+late  (t=10): delta@learned time(t=8)=-1.000  delta@late(t=10)=1.000
